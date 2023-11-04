@@ -12,8 +12,8 @@
   </head>
   <body>
     <header class="header">
-      <p class="logo">Golden</p>
       <div class="container">
+        <p class="logo">Golden</p>
         <nav class="nav">
           <ul class="list nav-list">
             <li class="nav-item"><a href="" class="nav-link">Home</a></li>
@@ -61,9 +61,11 @@
         <div class="container">
           <h2 class="contact-us-title">Contact Us</h2>
           <form class="contact-us-form">
-            <input type="text" name="name" autofocus placeholder="Your name *" class="contact-us-input"/><br/>
-            <input type="email" name="email" placeholder="Your e-mail *" class="contact-us-input"/><br />
-            <input type="text" name="subject" placeholder="Subject" class="contact-us-input"/><br />
+            <div class="contact-us-form-box">
+              <input type="text" name="name" autofocus placeholder="Your name *" class="contact-us-input"/>
+              <input type="email" name="email" placeholder="Your e-mail *" class="contact-us-input"/>
+              <input type="text" name="subject" placeholder="Subject" class="contact-us-input"/>
+            </div>
             <textarea name="comment" cols="30" rows="10" placeholder="Your message *" class="contact-us-comment"></textarea><br />
             <button type="submit" class="contact-us-submit">Send message</button>
           </form>
