@@ -197,6 +197,16 @@ img {
   color: #BBB;
   text-transform: uppercase;
 }
+.contact-us-input,
+.contact-us-textarea {
+    /* задати початкові дані для рамки та зробити її прозорою, щоб при ефекті не стрибало */
+  border: 2px solid transparent;
+}
+.contact-us-input:hover, .contact-us-input:focus,
+.contact-us-comment:hover, .contact-us-comment:focus {
+  border: 2px solid transparent;
+  cursor: pointer;
+}
 .contact-us-submit {
   width: 242px;
   height: 68px;
