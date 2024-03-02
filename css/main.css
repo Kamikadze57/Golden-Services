@@ -1,13 +1,13 @@
+@charset "UTF-8";
 :root {
   --accent-color: #fed136;
   --main-color: #222222;
   --add-color: #777777;
 }
+
 body {
   font-family: Montserrat;
 }
-
-
 
 h1,
 h2,
@@ -47,25 +47,31 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-
 
 .container {
   width: 972px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .header {
   padding-top: 44px;
 }
-.header> .container {
+
+.header > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .logo {
   color: var(--accent-color);
   font-family: Bilbo Swash Caps;
@@ -73,13 +79,18 @@ img {
   line-height: 1.13;
   letter-spacing: 1.3px;
 }
+
 .nav {
   margin-left: auto;
 }
+
 .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
+
 .nav-link {
   color: var(--accent-color);
   text-align: center;
@@ -90,11 +101,14 @@ img {
   padding: 10px;
   position: relative;
 }
-.nav-link:hover, .nav-link:focus {
+
+.nav-link:hover,
+.nav-link:focus {
   font-weight: 700;
 }
+
 .current::after {
-  content: '';
+  content: "";
   display: block;
   height: 4px;
   width: 100%;
@@ -102,44 +116,43 @@ img {
   background-color: var(--accent-color);
   border-radius: 4px;
 }
+
 .services {
   padding-top: 110px;
   padding-bottom: 118px;
 }
-.services-title {
-  color: var(--main-color);
-  text-align: center;
-  font-size: 40px;
-  line-height: 1.87;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  margin-bottom: 88px;
-}
+
 .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 56px;
 }
+
 .services-item::before {
-  content: '';
+  content: "";
   display: block;
   width: 70px;
   height: 69px;
   border: 3px solid var(--accent-color);
   border-radius: 50%;
   margin: 0 auto;
-  background-image: url('../images/services_svg\ 1.svg');
+  background-image: url("../images/services_svg 1.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 38px 38px;
 }
+
 .services-item:nth-child(2)::before {
-  background-image: url('../images/services_svg\ 2.svg');
+  background-image: url("../images/services_svg 2.svg");
   background-size: 40px 33px;
 }
+
 .services-item:nth-child(3)::before {
-  background-image: url('../images/services_svg\ 3.svg');
+  background-image: url("../images/services_svg 3.svg");
   background-size: 27px 37px;
 }
+
 .services-item-title {
   color: var(--main-color);
   text-align: center;
@@ -147,6 +160,7 @@ img {
   line-height: 4.16;
   letter-spacing: -0.45px;
 }
+
 .services-item-text {
   color: var(--add-color);
   text-align: center;
@@ -154,46 +168,77 @@ img {
   font-size: 14px;
   letter-spacing: -0.35px;
 }
+
 .contact-us {
   background-color: var(--main-color);
   padding-top: 92px;
   padding-bottom: 115px;
 }
-.contact-us-title {
-  color: #fff;
-  font-size: 40px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 114px;
-}
+
 .contact-us-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 28px;
 }
-.contact-us-form-box { 
+
+.contact-us-form-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 28px;
 }
+
 .contact-us-input {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.35px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 28px;
   padding: 12px 20px 21px;
   width: 455px;
   outline: none;
+  -webkit-transition: border-color 550ms ease-in;
   transition: border-color 550ms ease-in;
 }
-.contact-us-input::placeholder {
-  color: #BBB;
+
+.contact-us-input::-webkit-input-placeholder {
+  color: #bbb;
   text-transform: uppercase;
 }
+
+.contact-us-input::-moz-placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.contact-us-input:-ms-input-placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.contact-us-input::-ms-input-placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.contact-us-input::placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
 .contact-us-comment {
   font-size: 14px;
   font-weight: 700;
@@ -205,22 +250,49 @@ img {
   width: 458px;
   height: 212px;
   outline: none;
+  -webkit-transition: border-color 550ms ease-in;
   transition: border-color 550ms ease-in;
 }
-.contact-us-comment::placeholder {
-  color: #BBB;
+
+.contact-us-comment::-webkit-input-placeholder {
+  color: #bbb;
   text-transform: uppercase;
 }
+
+.contact-us-comment::-moz-placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.contact-us-comment:-ms-input-placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.contact-us-comment::-ms-input-placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.contact-us-comment::placeholder {
+  color: #bbb;
+  text-transform: uppercase;
+}
+
 .contact-us-input,
 .contact-us-textarea {
-    /* задати початкові дані для рамки та зробити її прозорою, щоб при ефекті не стрибало */
+  /* задати початкові дані для рамки та зробити її прозорою, щоб при ефекті не стрибало */
   border: 2px solid transparent;
 }
-.contact-us-input:hover, .contact-us-input:focus,
-.contact-us-comment:hover, .contact-us-comment:focus {
+
+.contact-us-input:hover,
+.contact-us-input:focus,
+.contact-us-comment:hover,
+.contact-us-comment:focus {
   border: 2px solid transparent;
   cursor: pointer;
 }
+
 .contact-us-submit {
   width: 242px;
   height: 68px;
@@ -237,7 +309,28 @@ img {
   margin: 0 auto;
   margin-top: 29px;
 }
-.contact-us-submit:hover, .contact-us-submit:focus {
+
+.contact-us-submit:hover,
+.contact-us-submit:focus {
   cursor: pointer;
   opacity: 0.7;
 }
+
+.services-title {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.87;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 88px;
+}
+
+.contact-us-title {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 114px;
+}/*# sourceMappingURL=main.css.map */
