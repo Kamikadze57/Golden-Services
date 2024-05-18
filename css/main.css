@@ -1,8 +1,9 @@
 @charset "UTF-8";
-:root {
-  --accent-color: #fed136;
-  --main-color: #222222;
-  --add-color: #777777;
+.contact-us-title, .services-title {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
 }
 
 body {
@@ -73,7 +74,7 @@ img {
 }
 
 .logo {
-  color: var(--accent-color);
+  color: #fed136;
   font-family: Bilbo Swash Caps;
   font-size: 36px;
   line-height: 1.13;
@@ -92,18 +93,17 @@ img {
 }
 
 .nav-link {
-  color: var(--accent-color);
+  color: #fed136;
   text-align: center;
   font-size: 14px;
-  line-height: 41px;
   text-transform: uppercase;
+  line-height: 1.92;
+  letter-spacing: normal;
   text-decoration: none;
   padding: 10px;
   position: relative;
 }
-
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover, .nav-link:focus {
   font-weight: 700;
 }
 
@@ -113,7 +113,7 @@ img {
   height: 4px;
   width: 100%;
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: #fed136;
   border-radius: 4px;
 }
 
@@ -126,35 +126,37 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 56px;
 }
 
+.services-item {
+  text-align: center;
+}
+.services-item:nth-child(1)::before {
+  background-image: url("../images/services_svg1.svg");
+}
+.services-item:nth-child(2)::before {
+  background-image: url("../images/services_svg2.svg");
+}
+.services-item:nth-child(3)::before {
+  background-image: url("../images/services_svg3.svg");
+}
 .services-item::before {
   content: "";
-  display: block;
+  display: inline-block;
   width: 70px;
-  height: 69px;
-  border: 3px solid var(--accent-color);
+  height: 70px;
+  border: 3px solid #fed136;
   border-radius: 50%;
-  margin: 0 auto;
-  background-image: url("../images/services_svg 1.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 38px 38px;
-}
-
-.services-item:nth-child(2)::before {
-  background-image: url("../images/services_svg 2.svg");
-  background-size: 40px 33px;
-}
-
-.services-item:nth-child(3)::before {
-  background-image: url("../images/services_svg 3.svg");
-  background-size: 27px 37px;
+  background-position: 50%;
 }
 
 .services-item-title {
-  color: var(--main-color);
+  color: #222222;
   text-align: center;
   font-size: 18px;
   line-height: 4.16;
@@ -162,7 +164,7 @@ img {
 }
 
 .services-item-text {
-  color: var(--add-color);
+  color: #777777;
   text-align: center;
   font-family: RobotoSlab;
   font-size: 14px;
@@ -170,7 +172,7 @@ img {
 }
 
 .contact-us {
-  background-color: var(--main-color);
+  background-color: #222222;
   padding-top: 92px;
   padding-bottom: 115px;
 }
@@ -182,68 +184,68 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 28px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 28px;
 }
 
 .contact-us-form-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 28px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 28px;
 }
 
 .contact-us-input {
   font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.35px;
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 28px;
+  line-height: normal;
+  letter-spacing: -0.35px;
+  font-weight: 700;
   padding: 12px 20px 21px;
   width: 455px;
   outline: none;
   -webkit-transition: border-color 550ms ease-in;
   transition: border-color 550ms ease-in;
 }
-
 .contact-us-input::-webkit-input-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-input::-moz-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-input:-ms-input-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-input::-ms-input-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-input::placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
+.contact-us-input:hover, .contact-us-input:focus {
+  border: 2px solid transparent;
+  cursor: pointer;
+}
 
 .contact-us-comment {
   font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.35px;
   text-transform: uppercase;
+  line-height: normal;
+  letter-spacing: -0.35px;
+  font-weight: 700;
   padding-top: 14px;
   padding-left: 22px;
   resize: none;
@@ -253,30 +255,29 @@ img {
   -webkit-transition: border-color 550ms ease-in;
   transition: border-color 550ms ease-in;
 }
-
 .contact-us-comment::-webkit-input-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-comment::-moz-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-comment:-ms-input-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-comment::-ms-input-placeholder {
   color: #bbb;
   text-transform: uppercase;
 }
-
 .contact-us-comment::placeholder {
   color: #bbb;
   text-transform: uppercase;
+}
+.contact-us-comment:hover, .contact-us-comment:focus {
+  border: 2px solid transparent;
+  cursor: pointer;
 }
 
 .contact-us-input,
@@ -285,18 +286,10 @@ img {
   border: 2px solid transparent;
 }
 
-.contact-us-input:hover,
-.contact-us-input:focus,
-.contact-us-comment:hover,
-.contact-us-comment:focus {
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
 .contact-us-submit {
   width: 242px;
   height: 68px;
-  background-color: var(--accent-color);
+  background-color: #fed136;
   font-family: Montserrat;
   border: none;
   color: #fff;
@@ -309,28 +302,18 @@ img {
   margin: 0 auto;
   margin-top: 29px;
 }
-
-.contact-us-submit:hover,
-.contact-us-submit:focus {
+.contact-us-submit:hover, .contact-us-submit:focus {
   cursor: pointer;
   opacity: 0.7;
 }
 
 .services-title {
-  color: var(--main-color);
-  text-align: center;
-  font-size: 40px;
+  color: #222222;
   line-height: 1.87;
-  letter-spacing: -1px;
-  text-transform: uppercase;
   margin-bottom: 88px;
 }
 
 .contact-us-title {
   color: #fff;
-  text-align: center;
-  font-size: 40px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
   margin-bottom: 114px;
 }/*# sourceMappingURL=main.css.map */

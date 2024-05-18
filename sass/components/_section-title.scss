@@ -1,17 +1,11 @@
 .services-title {
-  color: var(--main-color);
-  text-align: center;
-  font-size: 40px;
+  @extend %title;
+  color: $main-color;
   line-height: 1.87;
-  letter-spacing: -1px;
-  text-transform: uppercase;
   margin-bottom: 88px;
 }
 .contact-us-title {
+  @extend %title;
   color: #fff;
-  text-align: center;
-  font-size: 40px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
   margin-bottom: 114px;
 }

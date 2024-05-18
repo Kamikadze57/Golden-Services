@@ -3,39 +3,35 @@
   padding-bottom: 118px;
 }
 .services-list {
-  display: flex;
-  gap: 56px;
+  @include flex(56px);
 }
-.services-item::before {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 69px;
-  border: 3px solid var(--accent-color);
-  border-radius: 50%;
-  margin: 0 auto;
-  background-image: url("../images/services_svg\ 1.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 38px 38px;
-}
-.services-item:nth-child(2)::before {
-  background-image: url("../images/services_svg\ 2.svg");
-  background-size: 40px 33px;
-}
-.services-item:nth-child(3)::before {
-  background-image: url("../images/services_svg\ 3.svg");
-  background-size: 27px 37px;
+.services-item {
+  text-align: center;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      background-image: url("../images/services_svg#{$i}.svg");
+    }
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid $accent-color;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    }
 }
 .services-item-title {
-  color: var(--main-color);
+  color: $main-color;
   text-align: center;
   font-size: 18px;
   line-height: 4.16;
   letter-spacing: -0.45px;
 }
 .services-item-text {
-  color: var(--add-color);
+  color: $add-color;
   text-align: center;
   font-family: RobotoSlab;
   font-size: 14px;

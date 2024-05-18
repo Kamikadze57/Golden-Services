@@ -6,7 +6,7 @@
   align-items: center;
 }
 .logo {
-  color: var(--accent-color);
+  color: $accent-color;
   font-family: Bilbo Swash Caps;
   font-size: 36px;
   line-height: 1.13;
@@ -20,18 +20,16 @@
   gap: 10px;
 }
 .nav-link {
-  color: var(--accent-color);
+  color: $accent-color;
   text-align: center;
-  font-size: 14px;
-  line-height: 41px;
-  text-transform: uppercase;
+  @include text(1.92, normal);
   text-decoration: none;
   padding: 10px;
   position: relative;
-}
-.nav-link:hover,
-.nav-link:focus {
-  font-weight: 700;
+  &:hover,
+  &:focus {
+    font-weight: 700;
+  }
 }
 .current::after {
   content: "";
@@ -39,6 +37,6 @@
   height: 4px;
   width: 100%;
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   border-radius: 4px;
 }
